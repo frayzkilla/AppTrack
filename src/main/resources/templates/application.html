@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>AppTrack</title>
+
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-4">
+        <a class="navbar-brand" href="#">Управляющая Компания "Сокол"</a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#">Главная</a>
+                <a class="nav-item nav-link" href="/contacts">Контакты</a>
+                <a class="nav-item nav-link" href="/news">Новости</a>
+                <a sec:authorize="hasAuthority('USER')" class="nav-item nav-link active" href="/applications/">Мои
+                    заявления</a>
+                <a sec:authorize="hasAuthority('MODERATOR')" class="nav-item nav-link" href="/">Мое подразделение</a>
+                <a sec:authorize="!isAuthenticated()" class="nav-item nav-link" href="/login">Войти</a>
+                <a sec:authorize="isAuthenticated()" class="nav-item nav-link" href="/logout">Выйти (<span
+                        sec:authentication="name">UUser</span>)</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container w-75 mt-4">
+    <div class="hero">
+        <h1>Подача Заявления</h1>
+        <p>Заполните форму ниже для подачи вашего заявления.</p>
+    </div>
+
+    <form id="application_form" th:action="@{/applications/addApplication}" method="POST">
+        <div class="form-group m-2">
+            <label for="departmentName">Укажите отделение УК</label>
+            <select id="departmentName" name="departmentId" class="form-select">
+                <option th:each="department : ${departments}" th:value="${department.id}" th:text="${department.name}">
+                </option>
+            </select>
+        </div>
+        <div class="form-group m-2">
+            <label for="message">Сообщение</label>
+            <textarea name="applicationText" class="form-control" id="message" rows="4"
+                      placeholder="Опишите вашу проблему или вопрос" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary m-2">Отправить Заявление</button>
+        <a href="/applications/" class="btn btn-secondary">Назад</a>
+    </form>
+</div>
+
+<footer class="text-center mt-5">
+    <p>&copy; 2025 Управляющая Компания "Сокол". Все права защищены.</p>
+</footer>
+
+</body>
+</html>
