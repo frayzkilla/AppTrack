@@ -20,7 +20,7 @@ public class SecurityConfig {
 
                         .requestMatchers("/applications/**").hasAnyAuthority("USER")
                         .requestMatchers("/department/**").hasAnyAuthority("MODERATOR")
-                        .requestMatchers("/login", "/register", "/contacts", "/news", "/").permitAll()
+                        .requestMatchers("/login", "/register", "/contacts", "/news", "/", "/dataTask/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin(login -> login

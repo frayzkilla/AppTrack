@@ -20,3 +20,37 @@ INSERT INTO applications (department_id, user_id, creation_date, state, text) VA
 INSERT INTO applications (department_id, user_id, creation_date, state, text) VALUES ('3', '2', '22.01.2025', '0', 'Необходимо провести уборку территории вокруг дома по адресу Лермонтова 45.');
 INSERT INTO applications (department_id, user_id, creation_date, state, text) VALUES ('2', '3', '23.01.2025', '0', 'На улице Гагарина 10 наблюдается затопление после дождя, требуется устранить проблему.');
 INSERT INTO applications (department_id, user_id, creation_date, state, text) VALUES ('3', '4', '25.01.2025', '0', 'Установка новых почтовых ящиков по адресу Тихая 12.');
+
+INSERT INTO genre (id, name) VALUES (1, 'Action');
+INSERT INTO genre (id, name) VALUES (2, 'Drama');
+INSERT INTO genre (id, name) VALUES (3, 'Comedy');
+INSERT INTO genre (id, name) VALUES (4, 'Thriller');
+INSERT INTO genre (id, name) VALUES (5, 'Sci-Fi');
+INSERT INTO genre (id, name) VALUES (6, 'Horror');
+
+INSERT INTO director (id, name) VALUES (1, 'Christopher Nolan');
+INSERT INTO director (id, name) VALUES (2, 'Quentin Tarantino');
+INSERT INTO director (id, name) VALUES (3, 'David Fincher');
+INSERT INTO director (id, name) VALUES (4, 'Wes Anderson');
+INSERT INTO director (id, name) VALUES (5, 'James Cameron');
+INSERT INTO director (id, name) VALUES (6, 'John Carpenter');
+INSERT INTO director (id, name) VALUES (7, 'Wes Craven');
+INSERT INTO director (id, name) VALUES (8, 'Ari Aster');
+INSERT INTO director (id, name) VALUES (9, 'James Wan');
+INSERT INTO director (id, name) VALUES (10, 'Jordan Peele');
+
+INSERT INTO film (id, title, rating, year, genre_id, director_id) VALUES (1, 'Inception', 8.8, 2010, 1, 1);
+INSERT INTO film (id, title, rating, year, genre_id, director_id) VALUES (2, 'Pulp Fiction', 8.9, 1994, 2, 2);
+INSERT INTO film (id, title, rating, year, genre_id, director_id) VALUES (3, 'Interstellar', 8.6, 2014, 1, 1);
+INSERT INTO film (id, title, rating, year, genre_id, director_id) VALUES (4, 'Fight Club', 8.8, 1999, 4, 3);
+INSERT INTO film (id, title, rating, year, genre_id, director_id) VALUES (5, 'The Matrix', 8.7, 1999, 5, 5);
+INSERT INTO film (id, title, rating, year, genre_id, director_id) VALUES (6, 'Alien', 8.5, 1979, 6, 5);
+INSERT INTO film (id, title, rating, year, genre_id, director_id) VALUES (7, 'The Grand Budapest Hotel', 8.1, 2014, 3, 4);
+INSERT INTO film (id, title, rating, year, genre_id, director_id) VALUES (8, 'Se7en', 8.6, 1995, 4, 3);
+INSERT INTO film (id, title, rating, year, genre_id, director_id) VALUES (9, 'Titanic', 7.9, 1997, 2, 5);
+INSERT INTO film (id, title, rating, year, genre_id, director_id) VALUES (10, 'Halloween', 7.7, 1978, 6, 6);
+INSERT INTO film (id, title, rating, year, genre_id, director_id) VALUES (11, 'A Nightmare on Elm Street', 7.5, 1984, 6, 7);
+INSERT INTO film (id, title, rating, year, genre_id, director_id) VALUES (12, 'Hereditary', 7.3, 2018, 6, 8);
+INSERT INTO film (id, title, rating, year, genre_id, director_id) VALUES (13, 'The Conjuring', 7.5, 2013, 6, 9);
+INSERT INTO film (id, title, rating, year, genre_id, director_id) VALUES (14, 'Get Out', 7.8, 2017, 6, 10);
+INSERT INTO film (id, title, rating, year, genre_id, director_id) VALUES (15, 'The Thing', 8.2, 1982, 6, 6);

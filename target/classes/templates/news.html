@@ -10,8 +10,11 @@
             src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
             crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -23,10 +26,13 @@
                 <a class="nav-item nav-link" href="/">Главная</a>
                 <a class="nav-item nav-link" href="/contacts">Контакты</a>
                 <a class="nav-item nav-link active" href="#">Новости</a>
-                <a sec:authorize="hasAuthority('USER')" class="nav-item nav-link" href="/applications/">Мои заявления</a>
-                <a sec:authorize="hasAuthority('MODERATOR')" class="nav-item nav-link" href="/department/">Мое подразделение</a>
+                <a sec:authorize="hasAuthority('USER')" class="nav-item nav-link" href="/applications/">Мои
+                    заявления</a>
+                <a sec:authorize="hasAuthority('MODERATOR')" class="nav-item nav-link" href="/department/">Мое
+                    подразделение</a>
                 <a sec:authorize="!isAuthenticated()" class="nav-item nav-link" href="/login">Войти</a>
-                <a sec:authorize="isAuthenticated()" class="nav-item nav-link" href="/logout">Выйти (<span sec:authentication="name">UUser</span>)</a>
+                <a sec:authorize="isAuthenticated()" class="nav-item nav-link" href="/logout">Выйти (<span
+                        sec:authentication="name">UUser</span>)</a>
             </div>
         </div>
     </nav>
@@ -40,7 +46,8 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Начало отопительного сезона</h5>
-                    <p class="card-text">Уважаемые жители! С 1 октября начинается отопительный сезон. Пожалуйста, сообщайте о любых проблемах с отоплением в ваши квартиры.</p>
+                    <p class="card-text">Уважаемые жители! С 1 октября начинается отопительный сезон. Пожалуйста,
+                        сообщайте о любых проблемах с отоплением в ваши квартиры.</p>
                     <p class="text-muted">Дата: 30 сентября 2023</p>
                 </div>
             </div>
@@ -50,7 +57,8 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Плановый ремонт подъездов</h5>
-                    <p class="card-text">С 10 октября начнётся плановый ремонт подъездов в домах по ул. Ленина, 10 и ул. Пушкина, 5. Приносим извинения за временные неудобства.</p>
+                    <p class="card-text">С 10 октября начнётся плановый ремонт подъездов в домах по ул. Ленина, 10 и ул.
+                        Пушкина, 5. Приносим извинения за временные неудобства.</p>
                     <p class="text-muted">Дата: 28 сентября 2023</p>
                 </div>
             </div>
@@ -60,7 +68,8 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Сбор средств на благоустройство дворов</h5>
-                    <p class="card-text">Уважаемые жильцы! Мы запускаем сбор средств на благоустройство дворовых территорий. Подробности можно узнать в офисе управляющей компании.</p>
+                    <p class="card-text">Уважаемые жильцы! Мы запускаем сбор средств на благоустройство дворовых
+                        территорий. Подробности можно узнать в офисе управляющей компании.</p>
                     <p class="text-muted">Дата: 27 сентября 2023</p>
                 </div>
             </div>
@@ -70,7 +79,8 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Обновление системы видеонаблюдения</h5>
-                    <p class="card-text">В рамках повышения безопасности в нашем районе будет обновлена система видеонаблюдения. Работы начнутся с 15 октября.</p>
+                    <p class="card-text">В рамках повышения безопасности в нашем районе будет обновлена система
+                        видеонаблюдения. Работы начнутся с 15 октября.</p>
                     <p class="text-muted">Дата: 26 сентября 2023</p>
                 </div>
             </div>

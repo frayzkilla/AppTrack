@@ -30,7 +30,7 @@ public class ApplicationsController {
     }
 
     @GetMapping(value = "/")
-    public String getProjectsPage(Model model, Authentication authentication) {
+    public String getAppPage(Model model, Authentication authentication) {
         model.addAttribute("userApplication", new Application());
 
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
